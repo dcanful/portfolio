@@ -1,0 +1,221 @@
+@charset:"utf-8";
+
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700,700i");
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,300,300i,400,400i,800,800i');
+
+/*
+Nanum Gothic
+	font-family: "Nanum Gothic", sans-serif;
+Open 
+	font-family: "Open Sans", sans-serif;
+Raleway
+	font-family: "Raleway", sans-serif;
+*/
+
+/* reset */
+	html,body {margin:0; padding:0; font-family:"나눔고딕","Nanum Gothic","Helvetica Neue",Arial,sans-serif; font-weight:normal; font-size:12px; height:100%; color:#333; -webkit-text-size-adjust:none; position:relative; line-height:1.2;}
+	dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote {margin:0; padding:0; -webkit-text-size-adjust:none;}
+	th,td,input,textarea,select {font-size:12px; color:#333; font-family:"나눔고딕","Nanum Gothic","Helvetica Neue",Arial,sans-serif; -webkit-text-size-adjust:none;}
+	th,td {word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none;}
+	table {border-spacing:0; border-collapse:collapse; -webkit-text-size-adjust:none; border:0; table-layout:fixed;}
+	address,caption,cite,code,dfn,var {font-style:normal; font-weight:normal; -webkit-text-size-adjust:none;}
+	em {font-style:normal; -webkit-text-size-adjust:none;}
+	ol,ul,li {list-style:none;}
+	h1,h2,h3,h4,h5,h6 {font-size:100%;}
+	abbr,acronym {border:0;}
+	hr,legend,caption {visibility:hidden; overflow:hidden; line-height:0; width:0; height:0; margin:0; padding:0;}
+	img,fieldset {border:0 none;}
+	label {cursor:pointer;}
+	a {color:inherit;}
+	a:link, a:visited, a:hover {color:inherit; text-decoration:none;}
+	a:active {text-decoration:none;}
+	input,img {vertical-align:middle;}
+
+/*layout*/
+	#header_container {position:fixed; left:0; top:0; width:100%; height:80px;
+		background-color:#212529; z-index: 3000;}
+	#header_container .header_inner {width:1280px; height:100%; position:relative; margin:0 auto;}
+	#header_container .logo {position:absolute; left:30px; top:50%; margin-top:-15px;}
+	#header_container .logo img {width:338px; height:35px;}
+
+	#header_container .gnb_wrap {position:absolute; right:30px; top:50%; margin-top:-18px;}
+	#header_container .gnb_wrap li {float:left; margin-left:40px;}
+	#header_container .gnb_wrap li a {display:block; height:36px; line-height:36px; color:#fff; font-size:18px; font-family: "Raleway", sans-serif; text-transform:uppercase;
+		position: relative; transition:all 0.3s;}
+	#header_container .gnb_wrap li a:after {content:""; position:absolute; left:0; width:100%; top:100%; bottom:0; border:1px solid #fa0064;
+		transition:all 0.3s; transform:scale(0,1);}
+	#header_container .gnb_wrap li a:hover {color:#fa0064;}
+	#header_container .gnb_wrap a:hover::after {transform:scale(1);}
+	#body_container {min-width: 1280px;}
+	#footer_container {min-width: 1280px;}
+	.m{display: none;}
+
+	/*intro*/
+	.intro_section {height:100%; padding-top:80px; box-sizing:border-box; min-width: 1280px;}
+	.intro_section .intro_inner {height:100%; background:url(../images/bg_intro01.JPG) center center no-repeat;
+        background-size: cover; background-attachment: fixed; text-align:center; position:relative;}
+    .intro_section .intro_inner::before {content:""; position: absolute;
+    	left:0; right:0; top:0; bottom:0; background-color:rgba(0,0,0,0.55);/*#000; opacity: 0.6*/}
+    .intro_section .intro_inner::after {content:""; display:inline-block; vertical-align:middle; height:100%;}
+    /*    height를 100%로 써야 하는 이유: 그 전에 이미 intro inner영역을 box-sizing으로 잘라내서, 잘라낸 영역이 100%로 인식하도록 만들어서 적어야 하는 것임*/
+	.intro_section .intro_inner .content {display:inline-block; vertical-align:middle; color:#fff; position: relative;}
+	.intro_section .intro_inner .content h2 {font-size: 86px; font-family: "Open Sans", sans-serif;}
+	.intro_section .intro_inner .content p {font-size:26px; font-style: italic; font-family: "Raleway", sans-serif; font-weight: 100;
+		line-height:1.5; margin-top:20px;}
+
+	/*body_section (공통)*/
+	.section {min-width: 1280px; min-height: 800px; box-sizing:border-box; padding:85px 0;}
+	.section .title {font-size: 40px; text-align: center; font-family:"Raleway", sans-serif; text-transform:uppercase;}
+	.section .subText {font-size:16px; text-align: center; color:#999; font-style: italic; font-family:"Raleway", sans-serif;
+		margin-top:15px; font-weight:300;}
+
+	/*about*/
+	#about_section {background-color:#f8f9fa;}
+	#about_section .content_wrap {width:900px; min-height:350px; padding-left:450px;
+		box-sizing: border-box; margin:120px auto 0; position:relative;}
+	#about_section .content_wrap .profile {position:absolute; left:0; top:0; width:350px; height:350px;
+		border-radius: 50%; overflow: hidden; box-shadow:4px 4px 10px #ccc;}
+	#about_section .content_wrap .profile img {width:100%; height:100%;}
+
+	#about_section .content_wrap .contBox {line-height: 1.4;}
+	#about_section .content_wrap .contBox .name {font-size:32px; font-family: "Open Sans", sans-serif;}
+	#about_section .content_wrap .contBox .job {color:#666; font-size: 16px; margin-top:5px; display: block; font-family: "Raleway", sans-serif; }
+
+	#about_section .content_wrap .icon_wrap ul li {display:inline-block; margin-right:20px; margin-top: 15px; margin-bottom: 20px;}
+	#about_section .content_wrap .icon_wrap ul li a {display: block; background-color: black; border-radius:50%;}
+	#about_section .content_wrap .icon_wrap ul li a:hover {background-color:#fa0064;}
+	#about_section .content_wrap .icon_wrap img {width: 50px; height:50px;}
+
+	#about_section .content_wrap .table_wrap table {width:100%;}
+	#about_section .content_wrap .table_wrap tbody {word-break: break-all; word-wrap: break-word;}
+	#about_section .content_wrap .table_wrap th {width:100px; border-collapse:collapse; font-size: 16px; line-height: 1.4;
+		text-align: left; vertical-align:top; padding:6px 0; font-weight:normal;}
+	#about_section .content_wrap .table_wrap td {border-collapse:collapse; margin-top: 20px; font-size: 16px; line-height: 1.4;
+		text-align: left; padding:6px 0; color:#666;}
+	#about_section .content_wrap .table_wrap td a {text-decoration:underline;}
+
+	/*skill*/
+	#skill_section {}
+	#skill_section .skill_wrap {text-align: center; margin-top:160px; font-size: 0px;}
+	#skill_section .skill_wrap ul {display: block;}
+	#skill_section .skill_wrap li {display: inline-block; vertical-align: middle; margin-left: 30px;}
+	#skill_section .skill_wrap li:first-child {margin-left: 0px;}
+	#skill_section .skill_wrap li strong {font-size: 28px; display:block; margin-top:20px; font-family: "Open Sans", sans-serif;}
+	#skill_section .skill_wrap .ps div {width: 180px; height:180px; border: 12px solid #00c8ff; background-color: #001d26; border-radius:50%; box-sizing:border-box;}
+	#skill_section .skill_wrap .ai div {width: 180px; height:180px; border: 12px solid #ff7c00; background-color: #261300; border-radius:50%; box-sizing:border-box;}
+	#skill_section .skill_wrap .id div {width: 180px; height:180px; border: 12px solid #ff3f94; background-color: #280012; border-radius:50%; box-sizing:border-box;}
+	#skill_section .skill_wrap .ae div {width: 180px; height:180px; border: 12px solid #cf91ff; background-color: #1f003f; border-radius:50%; box-sizing:border-box;}
+	#skill_section .skill_wrap .max div {width: 180px; height:180px; background-color: #09a1a1; border-radius:50%;}
+	#skill_section .skill_wrap div::after {content:""; display:inline-block; height: 100%; vertical-align: middle; }
+		/*div에 공통적인 부분을 넣고 유니크한 부분만 따로 빼면 더 간단해질 듯! div에다 보더까지 다 준 상태로 색상만 바꿔줘도 OK*/
+
+	#skill_section .skill_wrap li div {overflow: hidden;}
+	#skill_section .skill_wrap li div:hover img {transform:scale(1.2) rotate(5deg);}
+	#skill_section .skill_wrap li div img {transition: all 0.2s;} /*부드럽게 전환*/
+
+	/*portfolio*/
+	#portfolio_section {background-color:#f8f9fa;}
+	#portfolio_section .content_wrap ul {width: 1160px; margin:0 auto; overflow:hidden;}
+	#portfolio_section .content_wrap .item {width:360px; height:490px; background-color:#fff;
+		float:left; margin:40px 0 0 40px; border: 1px solid #d3d3d3; box-sizing: border-box;}
+	#portfolio_section .content_wrap .item:nth-child(3n+1) {margin-left:0;}
+
+	#portfolio_section .content_wrap .item .thumbBox {height:358px; overflow: hidden; position:relative;}
+	#portfolio_section .content_wrap .item .thumbBox img {width:100%; height:100%;}
+	#portfolio_section .content_wrap .item .contBox {padding: 15px 15px 0;}
+	#portfolio_section .content_wrap .item .contBox .tit {font-size: 18px;}
+	#portfolio_section .content_wrap .item .contBox .type {color:#fa0064; margin-top:8px; display:block; text-transform: uppercase;}
+	#portfolio_section .content_wrap .item .contBox .desc {color:#999; line-height:16px; height: 48px; overflow: hidden;
+		margin-top: 10px;
+		/*말줄임css*/
+		text-overflow:ellipsis; -webkit-line-clamp:3; /* 셋째줄에서 ... 표시 */ -webkit-box-orient: vertical; display: -webkit-box;
+		word-wrap:break-word; -o-text-overflow:ellipsis;}
+
+	#portfolio_section .content_wrap .item div:hover img {background-color:rgba(0,0,0,0.6); transform:scale(1.1)}
+    #portfolio_section .content_wrap .item a:hover .pclass {opacity: 1; }
+    #portfolio_section .content_wrap .item a:hover .pclass::before, 
+	#portfolio_section .content_wrap .item a:hover .thumbBox .pclass::after {transform: scale(1);}
+
+    #portfolio_section .content_wrap .item .thumbBox .pclass::before,
+    #portfolio_section .content_wrap .item .thumbBox .pclass::after {content: ""; position: absolute; left: 5px; right: 5px; top: 5px; bottom: 5px; transition:all 0.4s; }
+	#portfolio_section .content_wrap .item .thumbBox .pclass::before {border-top:1px solid #fff; border-bottom: 1px solid #fff; transform:scale(0,1);}
+	#portfolio_section .content_wrap .item .thumbBox .pclass::after {border-left:1px solid #fff; border-right: 1px solid #fff; transform:scale(1,0);}
+	#portfolio_section .content_wrap .item .thumbBox p {opacity:0; text-transform: uppercase; position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.8); color: #fff; line-height: 358px; text-align: center; font-size: 26px; font-weight: 100; font-family: "Raleway", sans-serif;
+	transition: all 0.4s;}
+	/*#portfolio_section .content_wrap .item:hover p {display: block;}*/
+	#portfolio_section .content_wrap .item div img {transition: all 0.2s;}
+
+	/*footer*/
+	#footer_container .copy {width: 100%; height:100px; background-color: #212529; color:#fff; font-size: 16px; letter-spacing: -1px;
+		text-align: center; line-height: 100px;}
+
+
+/*반응형(모바일)*/
+@media (max-width: 1279px){
+	/*layout*/
+	#header_container .header_inner {box-sizing: border-box; padding-top:10px; width: auto;}
+	#header_container .logo {position: static; margin:0; text-align: center;}
+	#header_container .logo img {height: 25px; width: auto;} /*높이에 따라 auto하면 자동으로 조정*/
+
+	#header_container .gnb_wrap {position: static; margin: 0;}
+	#header_container .gnb_wrap li {margin-left: 0; width: 33.3%; text-align: center;}
+	#header_container .gnb_wrap li:first-child {width: 33.4%;}
+	#header_container .gnb_wrap li a {line-height: 40px; height: 43px;}
+
+	#body_container {min-width: 0;}
+	#footer_container {min-width: 0;}
+
+	/*intro*/
+	.intro_section {min-width: 0;}
+	.intro_section .intro_inner {background-size:auto 100%}
+	.intro_section .intro_inner .content h2{font-size: 36px;}
+	.intro_section .intro_inner .content p{font-size: 14px;}
+	.intro_section .intro_inner .content p .m{display: inline;}
+
+	/*body_section (공통)*/
+	.section {min-width: 0; min-height: 0; padding:30px 0;}
+	.section .title {font-size: 26px;}
+	.section .subText {font-size: 14px; margin-top:5px;}
+
+	/*about*/
+	#about_section .content_wrap {padding-left:0; width: auto; margin-top: 40px;}
+	#about_section .content_wrap .profile {position: static; margin:0 auto; width: 200px; height: 200px;}
+
+	#about_section .content_wrap .contBox {text-align: center;}
+	#about_section .content_wrap .contBox .name {font-size: 22px; margin-top:20px;}
+	#about_section .content_wrap .contBox .job {font-size: 16px; margin-top:10px;}
+	#about_section .content_wrap .icon_wrap {text-align: center; margin-top:10px;}
+
+	#about_section .content_wrap .table_wrap {margin:10px auto; width: 340px;}
+	#about_section .content_wrap .table_wrap th {font-size: 12px; width: 70px;}
+	#about_section .content_wrap .table_wrap td {font-size: 12px;}
+
+	/*skill*/
+	#skill_section .skill_wrap {margin-top:60px;}
+	#skill_section .skill_wrap li{display:block; margin:40px 0 0 0;}
+	#skill_section .skill_wrap li:first-child {margin-top: 0;}
+	#skill_section .skill_wrap li strong {font-size: 22px; margin-top:10px;}
+	#skill_section .skill_wrap div{margin:0 auto;}
+
+	/*portfolio*/
+	#portfolio_section .content_wrap {margin-top:60px;}
+	#portfolio_section .content_wrap ul {width: auto; font-size: 0; text-align: center; padding:0 20px; margin-top: -40px;}
+	#portfolio_section .content_wrap .item {float:none; display:inline-block; vertical-align: top; margin:0;
+		font-size: 12px; text-align: left; margin:40px 20px 0 !important;}
+
+	/*footer*/
+	#footer_container .copy {height: 80px; font-size: 12px; line-height: 80px;}
+
+}
+
+@media (max-width: 619px){
+	#portfolio_section .content_wrap .item{width: 100%; margin-left:0 !important; margin-right:0 !important;}
+}
+
+/*보낼때 중요한 점
+1. 프로젝트 폴더 전체를 통째로 보내기 (파일명 노 상관)
+2. 메일 주소로 zip 파일 보내기
+3. 제목: 3410이도현_ldhportfolio
+    ex. 3404김문정_bigbang 경로 띄어쓰기 X 숫자는 뒤에만 추가*/
